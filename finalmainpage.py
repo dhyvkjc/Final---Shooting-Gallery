@@ -2,6 +2,7 @@ import turtle
 import random
 import time
 
+
 screen = turtle.Screen()
 screen.setup(width=900, height=700)
 screen.bgcolor("black")
@@ -40,6 +41,7 @@ class Player:
         self.t.penup()
         self.t.shape("turtle")
         self.t.color("hot pink")
+        self.t.setheading(270)
         self.t.goto(self.x, self.y)
 
     def move_left(self):
@@ -105,8 +107,8 @@ class Bullet:
         self.t = turtle.Turtle()
         self.t.penup()
         self.t.shape("circle")
-        self.t.shapesize(0.3, 0.3)
-        self.t.color("hot pink")
+        self.t.shapesize(0.4, 0.4)
+        self.t.color("saddle brown")
         self.t.goto(self.x, self.y)
 
     def move(self):
@@ -122,7 +124,7 @@ class Score:
         self.t = turtle.Turtle()
         self.t.hideturtle()
         self.t.penup()
-        self.t.color("hot pink", )
+        self.t.color("hot pink" )
         self.update()
 
     def add(self, amount):
